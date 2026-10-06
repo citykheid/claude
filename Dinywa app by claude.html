@@ -1,0 +1,90 @@
+<title>claude.amuk</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dinywa</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: rgb(172, 46, 46);
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        background: #00aaff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #0088cc;
+    }
+
+    #result {
+        display: none;
+        margin-top: 30px;
+    }
+
+    .emoji {
+        font-size: 120px;
+    }
+
+    .laugh {
+        font-size: 100px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dinywa</h1>
+
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+    <br>
+    <button onclick="submitForm()">Submit</button>
+
+    <div id="result">
+        <h2>wee ni shoga umeclick submit matako yako umbwa huna maana wee panya!</h2>
+        <div class="emoji">🖕</div>
+        <div class="laugh">🐒😂</div>
+    </div>
+</div>
+
+<script>
+function submitForm() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+
+    if (name.trim() === "" || phone.trim() === "") {
+        alert("Please fill in both fields.");
+        return;
+    }
+
+    document.getElementById("result").style.display = "block";
+}
+</script>
+
+</body>
+</html>
